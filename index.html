@@ -3,111 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Checkout Grid No Media</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Расписание</title>
 </head>
-<body class="bg-[#fefefe] font-sans text-[#4a3728]">
+<body class="bg-[#efefef]">
 
-  <header class="bg-red-950 text-orange-100 py-5 flex justify-center items-center"> 
-    <h1 class="text-2xl font-bold text-center">Coffee Masters</h1>
-  </header>
+  <div class="p-6 min-h-screen">
 
-  <main class="max-w-6xl mx-auto p-10">
-    <div class="grid grid-cols-2 gap-10 items-start">
-
-      <section class="bg-orange-100 rounded-lg p-8 ">
-        <h2 class="text-orange-400 font-bold text-xl mb-8 ">ITEMS</h2>
-
-        <div class="space-y-6">
-          <div class="flex border-b border-orange-900 pb-5">
-            <span class="w-10 text-lg font-medium">1x</span>
-            <div class="flex-grow">
-              <div class="flex justify-between font-bold test-xl">
-                <span>Cappucino</span>
-                <span>$6.00</span>
-              </div>
-              <p>Light Foam</p>
-            </div>
-          </div>
-
-          <div class="space-y-6">
-          <div class="flex border-b border-orange-900 pb-5">
-            <span class="w-10 text-lg font-medium">1x</span>
-            <div class="flex-grow">
-              <div class="flex justify-between font-bold test-xl">
-                <span>Cappucino</span>
-                <span>$7.90</span>
-              </div>
-              <p>Light Foam</p>
-            </div>
-          </div>
-
-          
-          <div class="flex pb-2">
-            <span class="w-10 text-lg font-medium">1x</span>
-            <div class="flex-grow">
-              <div class="flex justify-between font-bold text-xl">
-                <span>Croissant</span>
-                <span>$5.37</span>
-              </div>
-              <p>Butter</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <div class="space-y-10">
-        <section class="bg-orange-100 rounded-lg ">
-          <h2 class="text-orange-400 font-bold m-4">Name</h2>
-          <div class="flex flex-col gap-[10px]">
-            <label class="text-orange-700 font-medium ml-4 text-sm " >Name for order</label>
-            <input class="w-full bg-transparent border-2 border-orange-900 rounded-full px-6 mb-4 py-3.5 " type=" text ">
-          </div>
-        </section>
-
-        <section class="bg-orange-100 rounded-lg ">
-          <h2 class="text-orange-400 font-bold m-4">Name</h2>
-          <div class="flex flex-col gap-[10px]">
-            <label class="text-orange-700 font-medium ml-4 text-sm " >Card number</label>
-            <input class="w-full bg-transparent border-2 border-orange-900 rounded-full px-6 mb-4 py-3.5 " type=" text ">
-
-            <label class="text-orange-700 font-medium ml-4 text-sm " >CCV Number</label>
-            <input class=" bg-transparent border-2 border-orange-900 rounded-full px-6 mb-4 py-3.5 " type=" text ">
-          </div>
-        </section>
-
-
-
+    <div class="flex justify-between items-center mb-10">
+      <div class="border border-gray-300 bg-white px-8 py-4 text-blue-700 text-3xl font-bold">
+        МОЕ РАСПИСАНИЕ 
       </div>
-      </section>
-
-      <div class="mt-16 max-w-lg mx-auto bg-white/50 p-6 rounded-xl border border-dashed border-[#d9c9b6]">
-      <div class="space-y-4">
-        <div class="flex justify-between text-xl text-[#4a3728]">
-          <span>Subtotal:</span>
-          <span class="font-semibold">$19.27</span>
-        </div>
-        <div class="flex justify-between text-xl text-[#4a3728]">
-          <span>Tax:</span>
-          <span class="font-semibold">$0.96</span>
-        </div>
-        <div class="flex justify-between text-3xl font-black text-[#2d1b10] pt-4 border-t border-[#d9c9b6]">
-          <span>Total:</span>
-          <span>$20.23</span>
-        </div>
+      <div class="text-2xl font-medium text-gray-600">
+        Today
       </div>
-      
-      <button class="w-full bg-[#d9b99b] hover:bg-[#c8a88a] text-[#2d1b10] font-bold py-5 rounded-full shadow-lg mt-10 text-xl">
-        Place order
-      </button>   
-
-
-
-
     </div>
-  </main>
+    
+    <h1 class="text-center text-[70px] font-bold mb-10">2F-4-EE</h1>
 
+    <div class="grid grid-cols-[100px_repeat(10,1fr)] gap-2 text-center mb-2">
+      <div></div> <div><div class="text-4xl font-bold">1</div><div class="text-sm">8:30-9:15</div></div>
+      <div><div class="text-4xl font-bold">2</div><div class="text-sm">9:20-10:05</div></div>
+      <div><div class="text-4xl font-bold">3</div><div class="text-sm">10:20-11:05</div></div>
+      <div><div class="text-4xl font-bold">4</div><div class="text-sm">11:10-11:55</div></div>
+      <div><div class="text-4xl font-bold">5</div><div class="text-sm">12:00-12:45</div></div>
+      <div><div class="text-4xl font-bold">6</div><div class="text-sm">12:50-13:35</div></div>
+      <div><div class="text-4xl font-bold">7</div><div class="text-sm">13:40-14:25</div></div>
+      <div><div class="text-4xl font-bold">8</div><div class="text-sm">14:35-15:20</div></div>
+      <div><div class="text-4xl font-bold">9</div><div class="text-sm">15:25-16:10</div></div>
+      <div><div class="text-4xl font-bold">10</div><div class="text-sm">16:15-17:00</div></div>
+    </div>
+
+    <div class="grid grid-cols-[100px_repeat(10,1fr)] grid-rows-5 gap-2 h-[600px] text-[18px] text-white font-medium">
+
+      <div class="flex items-center justify-center text-5xl text-black font-bold">Pn</div>
+      <div class="bg-slate-500 rounded p-4 col-start-2 col-span-2 flex items-center justify-center text-center">Web-bagdarlamalau</div>
+      <div class="bg-slate-500 rounded p-4 col-start-4 flex items-center justify-center text-center">aleumettenu</div>
+      <div class="bg-slate-500 rounded p-4 col-start-5 col-span-2 flex items-center justify-center text-center">web</div>
+      <div class="bg-orange-600 rounded p-4 col-start-7 flex items-center justify-center text-center">kat</div>
+      <div class="bg-slate-500 rounded p-4 col-start-9 col-span-2 flex items-center justify-center text-center">web</div>
+
+      <div class="flex items-center justify-center text-5xl text-black font-bold row-start-2">Vt</div>
+      <div class="bg-slate-500 rounded p-4 col-start-2 col-span-4 row-start-2 flex items-center justify-center text-center">web</div>
+      <div class="bg-orange-600 rounded p-4 col-start-6 col-span-2 row-start-2 flex items-center justify-center text-center">kat</div>
+      <div class="bg-slate-500 rounded p-4 col-start-9 col-span-2 row-start-2 flex items-center justify-center text-center">web</div>
+      
+      <div class="flex items-center justify-center text-5xl text-black font-bold row-start-3">Sr</div>
+      <div class="bg-slate-500 rounded p-4 col-start-2 col-span-2 row-start-3 flex items-center justify-center text-center">Web-bagdarlamalau</div>
+      <div class="bg-orange-600 rounded p-4 col-start-4 col-span-2 row-start-3 flex items-center justify-center text-center">Tyrik</div>
+      <div class="bg-blue-950 rounded p-4 col-start-6 col-span-2 row-start-3 flex items-center justify-center text-center">p.e</div>
+      <div class="bg-slate-500 rounded p-4 col-start-9 col-span-2 row-start-3 flex items-center justify-center text-center">Web-bagdarlamalau</div>
+
+      <div class="flex items-center justify-center text-5xl text-black font-bold row-start-4">Ct</div>
+      <div class="bg-slate-500 rounded p-4 col-start-2 col-span-2 row-start-4 flex items-center justify-center text-center">web</div>
+      <div class="bg-slate-500 rounded p-4 col-start-4 row-start-4 flex items-center justify-center text-center">kat</div>
+      <div class="bg-slate-500 rounded p-4 col-start-5 col-span-2 row-start-4 flex items-center justify-center text-center">p.e</div>
+      <div class="bg-slate-500 rounded p-4 col-start-7 row-start-4 flex items-center justify-center text-center">t.s</div>
+      <div class="bg-slate-500 rounded p-4 col-start-9 col-span-2 row-start-4 flex items-center justify-center text-center">web</div>
+
+      <div class="flex items-center justify-center text-5xl text-black font-bold row-start-5">Pt</div>
+      <div class="bg-slate-500 rounded p-4 col-start-2 col-span-2 row-start-5 flex items-center justify-center text-center">web</div>
+      <div class="bg-violet-900 rounded p-4 col-start-4 col-span-2 row-start-5 flex items-center justify-center text-center">volonter</div>
+      <div class="bg-slate-500 rounded p-4 col-start-6 row-start-5 flex items-center justify-center text-center">kat</div>
+      <div class="bg-slate-500 rounded p-4 col-start-7 row-start-5 flex items-center justify-center text-center">web</div>
+      <div class="bg-slate-500 rounded p-4 col-start-9 col-span-2 row-start-5 flex items-center justify-center text-center">web</div>
+    </div>
+
+  </div>
 
 </body>
 </html>
