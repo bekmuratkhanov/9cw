@@ -2,130 +2,65 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>1demo</title>
+  <title>JS Practice</title>
 </head>
-<body class=" bg-[url('bg-pattern-circle.svg')] bg-right-top bg-no-repeat flex flex-col bg-slate-100 ">
-  
-  
+<body>
 
-    <div class="flex flex-row ">
-     <img src="logo.svg" alt="">
-     <p>Pricing</p>
-     <p>About</p>
-     <p>Contact</p>
-     <button>Schedule a Demo</button>
-    </div>
+  <header id="header">
+    <h1 id="logo">Logo</h1>
+    <nav id="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <div class="header flex flex-row justify-center items-center ">
+  <main>
+    <section id="section">
+      <h2 id="title">Главный заголовок</h2>
+      <p id="text">Какой-то текст для примера</p>
+      <button id="btn">Кнопка</button>
+    </section>
+  </main>
 
+  <footer id="footer">
+    <p>© 2026</p>
+  </footer>
 
-      <div class="left flex flex-col justify-center  text-6xl font-serif font-semibold mx-40 ">
-        <h1>Start building <br> with our APIs for <br> absolutely free</h1>
-        <input type="text" placeholder="Enter email address" class="border border-gray-300 rounded-full mt-10 text-xl font-sans bg-white px-4 h-10 w-100  "/>
-      </div>
+  <script>
+    let header = document.querySelector("#header")
+    let nav = document.querySelector("#nav")
+    let section = document.querySelector("#section")
+    let title = document.querySelector("#title")
+    let btn = document.querySelector("#btn")
+    header.style.display = "flex";
+    header.style.justifyContent = "space-between";
+    header.style.padding = "20px";
+    header.style.backgroundColor = "gray";
+    header.style.color = "white";
 
+    nav.style.display = "flex";
+    nav.style.gap = "15px";
 
-      <div class="right">
-        <img src="illustration-phone-mockup.svg" alt="">
-      </div>
+    section.style.display = "flex";
+    section.style.flexDirection = "column";
+    section.style.alignItems = "center";
+    section.style.marginTop = "100px";
 
-
-
-
-    </div>
-
-    <div class="mt-60 bg-slate-900  h-70 w-400 flex flex-row justify-center items-center">
-      <div class="text-white mr-40 flex flex-col justify-center  w-screen-1/2">
-        <h3 class="text-2xl font-normal">Who we work with</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptas sapiente dolores <br>facere expedita neque, perspiciatis eveniet consequatur voluptate pariatur. <br> Quia nisi, fugiat accusamus voluptatum neque suscipit corporis laudantium quaerat.</p>
-        <button  class="mt-10 border border-3 border-white border-b-white h-10 w-30 text-white rounded-full">about us</button>
-
-      </div>
-
-      <div class="grid grid-cols-3 gap-3 w-screen-1/2 mr-40">
-        <img src="tesla.svg" alt="">
-        <img src="microsoft.svg" alt="">
-        <img src="hewlett-packard.svg" alt="">
-        <img src="oracle.svg" alt="">
-        <img src="google.svg" alt="">
-        <img src="nvidia.svg" alt="">
-      </div>
-
-    </div>
-
-    
-    <div class="header flex flex-row justify-center items-center ">
+    title.style.fontSize = "40px";
 
 
-      <div class="left flex flex-col justify-center ml-40 ">
-        <h1 class="text-6xl font-serif font-semibold" >Simple UI&UX</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Aperiam distinctio autem ex iusto eum enim excepturi corrupti culpa, rerum nihil.</p>
-      </div>
+    btn.style.padding = "10px 20px";
+    btn.style.marginTop = "20px";
+    btn.style.cursor = "pointer";
+
+    btn.onclick = function(){
+      title.style.color = "red"
+      title.innerText = "You clicked button"
+      document.body.style.backgroundColor = "#222";
 
 
-      <div class="right">
-        <img src="illustration-simple-ui.svg" alt="">
-      </div>
-
-    </div>
-
-
-    <div class="flex flex-row justify-around items-center">
-      <div class="flex flex-col justify-center items-center">
-        <img src="icon-personal-finances.svg" alt="">
-        <p class="text-xl" > Personal Finances</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Sed, deleniti? Voluptatem corrupti fuga dolorem quasi <br> ipsum ratione aperiam unde eveniet.</p>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <img src="icon-banking-and-coverage.svg" alt="">
-        <p class="text-xl" >Banking&Coverage</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Sed, deleniti? Voluptatem corrupti fuga dolorem quasi <br> ipsum ratione aperiam unde eveniet.</p>
-      </div>
-
-      <div class="flex flex-col justify-center items-center">
-        <img src="icon-consumer-payments.svg" alt="">
-        <p class="text-xl" >Consumer Payments</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Sed, deleniti? Voluptatem corrupti fuga dolorem quasi <br> ipsum ratione aperiam unde eveniet.</p>
-      </div>
-
-    </div>
-
-
-    <div class="header flex flex-row justify-center items-center mt-30  ">
-
-
-      <div class="w-screen-1/2 mr-20 ">
-        <h1 class="text-4xl font-serif font-semibold" >Ready To Start?</h1>
-        
-      </div>
-
-
-      <div class="w-screen-1/2 flex flex-col justify-center items-center">
-        <input type="text" placeholder="Enter email address" class="border border-gray-300 rounded-full mt-10 text-xl font-sans bg-white px-4 h-15 w-100 "/>
-        
-      </div>
-
-    </div>
-
-
-    <div class="mt-60 bg-slate-900  h-30 w-400 flex flex-row justify-center items-center">
-      <div class="text-white mr-40 flex flex-row items-center justify-center w-screen-1/2">
-        <img class="h-8 w-30 flex flex-row items-center justify-center" src="logo.svg" alt="">        
-        <p class="m-8">Pricing</p>
-        <p class="m-8">About</p>
-        <p class="m-8 mr-80">Contact</p>
-        
-      </div>
-
-      <div class="flex flex-row ">
-       <img class="m-2" src="facebook.svg" alt="">
-       <img class="m-2" src="twitter.svg" alt="">
-       <img class="m-2" src="linkedin.svg" alt="">
-       
-      </div>
+    }
 
 
 
@@ -134,10 +69,10 @@
 
 
 
+  </script>
   
 
-
-
+  
 
 </body>
 </html>
