@@ -1,55 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>hw</title>
-
-  <style>
-  </style>
-</head>
-<body class=" mx-30  ">
-
-
-  <div class="left">
-    <img id="img" src="image copy.png" alt="">
-
-
-  </div>
-
-
-
-
-  <div class="right">
-    <h1 id="title">Simple booking</h1>
-    <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Amet nesciunt distinctio cum unde a neque sint incidunt optio velit dolorem!</p>
-
-  </div>
-
-
-
-
+<html>
+<body id="bg">
+  <div id="card"></div>
 
   <script>
-    const body = document.body;
-    body.style.display = 'flex';
-    body.style.flexDirection = 'row';
-    body.style.justifyContent = 'space-evenly';
-    body.style.alignItems = 'center';
+    const bg = document.getElementById('bg');
+    bg.style.backgroundColor = '#f0f0f0';
+    bg.style.display = 'flex';
+    bg.style.justifyContent = 'center';
+    bg.style.paddingTop = '100px';
+    bg.style.fontFamily = 'sans-serif';
 
+    const card = document.getElementById('card');
+    card.style.backgroundColor = 'white';
+    card.style.width = '450px';
+    card.style.height = '250px';
+    card.style.padding = '30px';
+    card.style.display = 'grid';
+    card.style.gridTemplateColumns = '1fr 1.5fr'; 
+    card.style.alignItems = 'center';
+    card.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
 
-    const text = document.getElementById('text')
-    text.style.color = 'grey'
+    const photo = document.createElement('img');
+    photo.src = 'image.png'; 
+    photo.style.width = '150px';
+    card.appendChild(photo);
 
-    const title = document.getElementById('title')
-    title.style.fontFamily = 'bold , sans-serif'
-    title.style.fontSize = '50px'
+    const info = document.createElement('div');
+    info.style.lineHeight = '1.6';
+    
+    info.innerHTML = `
+      <div style="color: gray; font-size: 12px;">WEB developer</div>
+      <div style="font-size: 32px; font-weight: bold; margin-bottom: 10px;">Bek M.</div>
+      <div style="font-size: 14px;">bekmuratkhanov@jihc.edu.kz@gmail.com</div>
+      <div style="font-size: 14px; margin-top: 10px;">
+        <span>17 y.o</span> &nbsp;&nbsp; <span>Taraz gng</span>
+      </div>
+    `;
 
-
+    card.appendChild(info);
   </script>
-
-
-  
 </body>
 </html>
