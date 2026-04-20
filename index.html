@@ -1,78 +1,55 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Practice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>hw</title>
+
+  <style>
+  </style>
 </head>
-<body>
+<body class=" mx-30  ">
 
-  <header id="header">
-    <h1 id="logo">Logo</h1>
-    <nav id="nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="section">
-      <h2 id="title">Главный заголовок</h2>
-      <p id="text">Какой-то текст для примера</p>
-      <button id="btn">Кнопка</button>
-    </section>
-  </main>
+  <div class="left">
+    <img id="img" src="image copy.png" alt="">
 
-  <footer id="footer">
-    <p>© 2026</p>
-  </footer>
+
+  </div>
+
+
+
+
+  <div class="right">
+    <h1 id="title">Simple booking</h1>
+    <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Amet nesciunt distinctio cum unde a neque sint incidunt optio velit dolorem!</p>
+
+  </div>
+
+
+
+
 
   <script>
-    let header = document.querySelector("#header")
-    let nav = document.querySelector("#nav")
-    let section = document.querySelector("#section")
-    let title = document.querySelector("#title")
-    let btn = document.querySelector("#btn")
-    header.style.display = "flex";
-    header.style.justifyContent = "space-between";
-    header.style.padding = "20px";
-    header.style.backgroundColor = "gray";
-    header.style.color = "white";
-
-    nav.style.display = "flex";
-    nav.style.gap = "15px";
-
-    section.style.display = "flex";
-    section.style.flexDirection = "column";
-    section.style.alignItems = "center";
-    section.style.marginTop = "100px";
-
-    title.style.fontSize = "40px";
+    const body = document.body;
+    body.style.display = 'flex';
+    body.style.flexDirection = 'row';
+    body.style.justifyContent = 'space-evenly';
+    body.style.alignItems = 'center';
 
 
-    btn.style.padding = "10px 20px";
-    btn.style.marginTop = "20px";
-    btn.style.cursor = "pointer";
+    const text = document.getElementById('text')
+    text.style.color = 'grey'
 
-    btn.onclick = function(){
-      title.style.color = "red"
-      title.innerText = "You clicked button"
-      document.body.style.backgroundColor = "#222";
-
-
-    }
-
-
-
-
-
-
+    const title = document.getElementById('title')
+    title.style.fontFamily = 'bold , sans-serif'
+    title.style.fontSize = '50px'
 
 
   </script>
-  
+
 
   
-
 </body>
 </html>
