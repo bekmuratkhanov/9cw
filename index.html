@@ -1,69 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f0f8f5;
-      display: flex;
-      justify-content: center;
-      padding: 50px;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-    }
-    input {
-      width: 100%;
-      margin: 10px 0;
-      padding: 8px;
-      box-sizing: border-box;
-    }
-    button {
-      width: 100%;
-      background: #2ecc71;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
-  <body>
-    <div class="card">
-      <h2>Healthcore</h2>
-      <input type="number" id="weight" placeholder="Вес (кг)" />
-      <input type="number" id="height" placeholder="Рост (см)" />
-      <button onclick="calculate()">Узнать результат</button>
-      <p id="result"></p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body class="min-h-screen justify-center items-center flex bg-slate-100">
+  <div
+    class="container bg-purple-300 w-[800px] h-[500px] flex p-10 rounded-2xl lg:flex-row max-w-[900px] lg:w-full md:bg-white md:w-[400px] md:flex-col-reverse md:h-[800px]">
+    <div class="left flex flex-col p-5 gap-3 justify-around">
+      <h1 class="font-bold text-5xl">Stay updated!</h1>
+
+      <p class="opacity-40">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <div class="icon">
+        <div class="flex gap-3">
+          <p>Product discovery and building what matters</p>
+        </div>
+        <div class="flex gap-3">
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div class="flex gap-3">
+          <p>And much more!</p>
+        </div>
+
+      </div>
+      <p>Email address</p>
+      <input type="text" placeholder="email@company.com"
+        class="bg-transparent w-[320px] h-[50px] rounded-sm p-5 border border-zinc-800">
+
+      <button class="bg-blue-950 w-[320px] h-[50px] rounded-sm text-white">Subscribe to monthly newsletter</button>
+
     </div>
-    <script>
-      const calculate = () => {
-        const w = +document.getElementById("weight").value;
-        const h = +document.getElementById("height").value / 100;
+    <div class="right flex flex-row">
+      <img src="image.png" class="w-full rounded-xl h-full object-cover hidden lg:block">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" class=" w-full lg:hidden">
+    </div>
+  </div>
 
-        if (!w || !h) return alert("Введи данные!");
+</body>
 
-        const bmi = (w / h ** 2).toFixed(1);
-        const ideal = (h * 100 - 100 - (h * 100 - 150) / 4).toFixed(1);
-        const msg =
-          bmi < 18.5
-            ? "Дефицит веса 🦴"
-            : bmi < 25
-              ? "Форма ✨"
-              : "Лишний вес 🏃";
-        document.getElementById("result").innerHTML = `
-        ИМТ: <b>${bmi}</b> | Идеал: <b>${ideal} кг</b><br>
-        <i>${msg}</i>
-    `;
-      };
-    </script>
-  </body>
 </html>
