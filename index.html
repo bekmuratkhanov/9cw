@@ -3,100 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Interactive card details form</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
   </head>
-  <body class="h-screen w-screen overflow-hidden">
-    <div class="flex h-full w-full">
-      <div
-        class="h-full w-[35%] bg-[url('bg-main-desktop.png')] bg-cover bg-no-repeat relative"
-      >
-        <div
-          class="absolute left-[20%] top-[20%] w-[447px] h-[245px] bg-[url('bg-card-front.png')] bg-contain bg-no-repeat p-8 text-white"
-        >
-          <img src="card-logo.svg" alt="" />
-          <div class="mt-20 text-2xl tracking-widest">0000 0000 0000 0000</div>
-          <div class="flex justify-between mt-8 uppercase text-sm">
-            <span>Jane Appleseed</span>
-            <span>00/00</span>
-          </div>
-        </div>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f8f5;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      background: #2ecc71;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <div class="card">
+      <h2>Healthcore</h2>
+      <input type="number" id="weight" placeholder="Вес (кг)" />
+      <input type="number" id="height" placeholder="Рост (см)" />
+      <button onclick="calculate()">Узнать результат</button>
+      <p id="result"></p>
+    </div>
+    <script>
+      const calculate = () => {
+        const w = +document.getElementById("weight").value;
+        const h = +document.getElementById("height").value / 100;
 
-        <div
-          class="absolute left-[30%] top-[55%] w-[447px] h-[245px] bg-[url('bg-card-back.png')] bg-contain bg-no-repeat"
-        >
-          <span class="absolute right-12 top-[110px] text-white text-sm"
-            >000</span
-          >
-        </div>
-      </div>
-      <div class="h-full w-[65%] flex justify-center items-center">
-        <form
-          class="w-[380px] flex flex-col gap-6 uppercase tracking-widest text-[12px] font-bold text-violet-950"
-        >
-          <div class="flex flex-col gap-2">
-            <label>Cardholder Name</label>
-            <input
-              type="text"
-              placeholder="e.g. Jane Appleseed"
-              class="border border-gray-300 rounded-lg p-3 outline-none focus:border-violet-500 transition-all font-medium"
-            />
-          </div>
+        if (!w || !h) return alert("Введи данные!");
 
-          <div class="flex flex-col gap-2">
-            <label>Card Number</label>
-            <input
-              type="text"
-              placeholder="e.g. 1234 5678 9123 0000"
-              class="border border-gray-300 rounded-lg p-3 outline-none focus:border-violet-500 transition-all font-medium"
-            />
-          </div>
-
-          <div class="flex gap-4">
-            <div class="w-1/2 flex flex-col gap-2">
-              <label>Exp. Date (MM/YY)</label>
-              <div class="flex gap-2">
-                <input
-                  type="text"
-                  placeholder="MM"
-                  class="w-1/2 border border-gray-300 rounded-lg p-3 outline-none focus:border-violet-500 transition-all"
-                />
-                <input
-                  type="text"
-                  placeholder="YY"
-                  class="w-1/2 border border-gray-300 rounded-lg p-3 outline-none focus:border-violet-500 transition-all"
-                />
-              </div>
-            </div>
-            <div class="w-1/2 flex flex-col gap-2">
-              <label>CVC</label>
-              <input
-                type="text"
-                placeholder="e.g. 123"
-                class="border border-gray-300 rounded-lg p-3 outline-none focus:border-violet-500 transition-all"
-              />
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            class="bg-violet-950 text-white py-4 rounded-lg mt-4 hover:bg-violet-900 transition-all cursor-pointer"
-          >
-            Confirm
-          </button>
-        </form>
-        <script>
-          const cardName = document.querySelector(".card-name-display");
-          const cardNumber = document.querySelector(".card-number-display");
-          const cardMonth = document.querySelector(".card-month-display");
-          const cardYear = document.querySelector(".card-year-display");
-          const cardCvc = document.querySelector(".card-cvc-display");
+        const bmi = (w / h ** 2).toFixed(1);
+        const ideal = (h * 100 - 100 - (h * 100 - 150) / 4).toFixed(1);
+        const msg =
+          bmi < 18.5
+            ? "Дефицит веса 🦴"
+            : bmi < 25
+              ? "Форма ✨"
+              : "Лишний вес 🏃";
+        document.getElementById("result").innerHTML = `
+        ИМТ: <b>${bmi}</b> | Идеал: <b>${ideal} кг</b><br>
+        <i>${msg}</i>
+    `;
+      };
+    </script>
+  </body>
+</html>
